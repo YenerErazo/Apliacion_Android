@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/capa2">
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@android:drawable/ic_menu_camera"
+        android:onClick="tomarFoto"
+        android:id="@+id/btntomarFoto" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="Cam2"
+        android:textOn="Cam1"
+        android:onClick="cambiarCamara"
+        android:src="@android:drawable/ic_menu_camera"
+        android:layout_alignParentRight="true"
+        android:id="@+id/btnCambiarCamara" />
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <ImageView
+        android:id="@+id/img_user"
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:scaleType="center"
+        android:src="@drawable/usuarios"
+        android:layout_marginRight="12dp"/>
+
+    <TextView
+        android:id="@+id/txt_nombre_usuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TxtUsuario"
+        android:text="nombre"
+        android:layout_toRightOf="@+id/img_user"
+        android:layout_alignTop="@+id/img_user"/>
+
+
+    <TextView
+        android:id="@+id/txt_identificacion"
+        style="@style/Txtdatos"
+        android:text="identificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/img_user"
+        android:layout_below="@+id/txt_nombre_usuario"/>
+
+    <TextView
+        android:id="@+id/txt_correo_usuario"
+        style="@style/Txtdatos"
+        android:text="Correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/img_user"
+        android:layout_below="@+id/txt_identificacion"/>
+
+
+    <TextView
+        android:id="@+id/txt_genero_usuario"
+        style="@style/Txtdatos"
+        android:text="Genero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/img_user"
+        android:layout_below="@+id/txt_correo_usuario"/>
+
+    <TextView
+        android:id="@+id/txt_contrasena_usuario"
+        style="@style/Txtdatos"
+        android:text="Contraseña"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/img_user"
+        android:layout_below="@+id/txt_genero_usuario"/>
+
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:id="@+id/img_firma"
+        android:layout_alignParentRight="true"
+        android:scaleType="center"
+        android:src="@drawable/usuarios"
+        android:layout_marginRight="12dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#fcf8f8"
+    tools:context="com.example.yener.login.MainActivity_Registro">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registro"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+
+            <ImageButton
+                android:id="@+id/btn_tomarFoto"
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:src="@drawable/perfil"
+                android:layout_gravity="center"
+                android:background="#fcf8f8"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Nombre: "
+            android:layout_marginBottom="15dp"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/edt_registroNombre"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:hint="nombre"
+            android:textColor="#000000"
+            />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="Identificación"
+                android:layout_marginBottom="15dp"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/edt_registroIdentificacion"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:hint="Numero"
+                android:textColor="#000000"
+                android:inputType="textPassword"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Email: "
+            android:layout_marginBottom="15dp"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:inputType="textEmailAddress"/>
+
+        <EditText
+            android:id="@+id/edt_registroCorreo"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:hint="correo electronico"
+            android:textColor="#000000"
+            android:inputType="textEmailAddress"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Contraseña: "
+            android:layout_marginBottom="15dp"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <EditText
+            android:id="@+id/edt_registroContrasena"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:hint="Contraseña"
+            android:textColor="#000000"
+            android:inputType="textPassword"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Contraseña: "
+                android:layout_marginBottom="15dp"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/edt_confirmarContrasena"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:hint="Confirmar "
+                android:textColor="#000000"
+                android:inputType="textPassword"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Genero: "
+                android:layout_marginBottom="15dp"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+            <Spinner
+                android:id="@+id/sp_genero_registro"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content">
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp">
+
+            <Button
+                android:id="@+id/btn_firma_registro"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:text="Firma"
+                android:textSize="20sp"
+                android:textStyle="normal|bold"
+                android:background="#838b84"
+                android:textColor="#faf6f6"
+                android:layout_marginRight="17dp"
+                android:gravity="center"/>
+
+            <ImageView
+                android:id="@+id/ima_firma"
+                android:layout_width="180dp"
+                android:layout_height="100dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_cancel_registro"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:text="Cancelar"
+                android:textSize="20sp"
+                android:textStyle="normal|bold"
+                android:background="#838b84"
+                android:textColor="#faf6f6"
+                android:layout_marginRight="17dp"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/btn_registrarUsu"
+                android:layout_width="175dp"
+                android:layout_height="45dp"
+                android:text="Registrar"
+                android:textSize="20sp"
+                android:textStyle="normal|bold"
+                android:background="#838b84"
+                android:textColor="#faf6f6"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="txt_usuario">#222222</color>
+    <color name="txt_datos">#888888</color>
+</resources>

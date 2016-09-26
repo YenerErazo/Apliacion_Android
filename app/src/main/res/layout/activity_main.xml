@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="#fcf8f8"
+    tools:context="com.example.yener.login.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="50dp"/>
+
+    <EditText
+        android:id="@+id/edt_nombre_usuario"
+        android:layout_marginBottom="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:hint="Nombre de usuario"
+        android:textColor="#000000"
+
+        />
+
+    <EditText
+        android:id="@+id/edt_contraseña"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        android:hint="Contraseña"
+        android:textColor="#000000"
+        android:inputType="textPassword"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_registarse"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:text="Registrarse"
+            android:textSize="20sp"
+            android:textStyle="normal|bold"
+            android:background="#838b84"
+            android:textColor="#faf6f6"
+            android:layout_marginRight="17dp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="175dp"
+            android:layout_height="45dp"
+            android:text="Iniciar Sesión"
+            android:textSize="20sp"
+            android:textStyle="normal|bold"
+            android:background="#838b84"
+            android:textColor="#faf6f6"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_admin"
+        android:layout_width="175dp"
+        android:layout_height="45dp"
+        android:text="ADMIN"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        android:background="#838b84"
+        android:textColor="#faf6f6"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        />
+
+
+
+
+</LinearLayout>
