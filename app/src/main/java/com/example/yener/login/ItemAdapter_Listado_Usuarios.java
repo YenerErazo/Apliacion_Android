@@ -30,9 +30,6 @@ public class ItemAdapter_Listado_Usuarios  extends ArrayAdapter<Item_List_Usuari
 
         Item_List_Usuarios item = getItem(position);
 
-        //tV =(ImageView)v.findViewById(R.id.img_user);
-
-
         iv =(ImageView) v.findViewById(R.id.img_user);
         iv.setImageBitmap(item.getImagen());
 

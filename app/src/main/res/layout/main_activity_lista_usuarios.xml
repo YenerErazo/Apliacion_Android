@@ -10,13 +10,6 @@
     android:orientation="vertical"
     tools:context="com.example.yener.login.MainActivity_Lista_Usuarios">
 
-    <Button
-        android:id="@+id/btn_reportar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="generarPDFOnclic"
-        android:text="Generar Reporte"
-        android:layout_centerInParent="true"/>
 
     <ListView
         android:id="@+id/lst_usuarios"

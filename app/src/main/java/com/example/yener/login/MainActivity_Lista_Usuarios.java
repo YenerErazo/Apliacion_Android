@@ -2,6 +2,7 @@ package com.example.yener.login;
 
 import android.content.ActivityNotFoundException;
 import android.content.Context;
+import android.content.ContextWrapper;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -12,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -28,6 +31,7 @@ import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
 import org.ksoap2.transport.HttpTransportSE;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -49,7 +53,7 @@ public class MainActivity_Lista_Usuarios extends AppCompatActivity {
     private ArrayList<Item_List_Usuarios> datos = new ArrayList<Item_List_Usuarios>();
 
     Item_List_Usuarios[] listaUsuarios;
-    int idUsuario = 0;
+    Bitmap a, b;
 
 
     @Override
@@ -104,7 +108,7 @@ public class MainActivity_Lista_Usuarios extends AppCompatActivity {
 
                     usu.setIdentificacion(ic.getProperty(0).toString());
                     String ima = ic.getProperty(1).toString();
-                    Bitmap a = StringToBitMap(ima);
+                    a = StringToBitMap(ima);
                     usu.setImagen(a);
                     usu.setNombre(ic.getProperty(2).toString());
                     usu.setCorreo(ic.getProperty(3).toString());
@@ -112,7 +116,7 @@ public class MainActivity_Lista_Usuarios extends AppCompatActivity {
                     usu.setGenero(ic.getProperty(5).toString());
 
                     String fir = ic.getProperty(6).toString();
-                    Bitmap b = StringToBitMap(fir);
+                    b = StringToBitMap(fir);
                     usu.setFirma(b);
 
 
@@ -202,15 +206,19 @@ public class MainActivity_Lista_Usuarios extends AppCompatActivity {
                     "<td><strong>Genero</strong></td>\n" +
                     "<td><strong>Firma</strong></td>\n" +
                     "</tr>");
+
+            //BitmapFactory.decodeResource(getResources(), R.menu.menureporte);
+
             for (int i = 0; i < listaUsuarios.length; i++) {
 
+
                 aux.append("<tr>\n" +
-                        "<td></td>\n" +
-                        "<td>i[2]</td>\n" +
-                        "<td>i[3]</td>\n" +
-                        "<td>i[4]</td>\n" +
-                        "<td>i[5]</td>\n" +
-                        "<td>i[6]</td>\n" +
+                        "<td>"+listaUsuarios[i].getIdentificacion()+"</td>\n" +
+                        "<td>"+listaUsuarios[i].getNombre()+"</td>\n" +
+                        "<td>"+listaUsuarios[i].getCorreo()+"</td>\n" +
+                        "<td>"+listaUsuarios[i].getContrasena()+"</td>\n" +
+                        "<td>"+listaUsuarios[i].getGenero()+"</td>\n" +
+                        "<td><img"+listaUsuarios[i].getFirma()+ "\" width=\"100\" heigh=\"100\"/></td>\n" +
                         "</tr>");
             }
 
@@ -242,6 +250,8 @@ public class MainActivity_Lista_Usuarios extends AppCompatActivity {
         }
     }
 
+
+
     public void muestraPDF (String archivo, Context context){
         Toast.makeText(this, "Leyendo El Archivo", Toast.LENGTH_SHORT).show();
         File file = new File(archivo);
@@ -257,4 +267,47 @@ public class MainActivity_Lista_Usuarios extends AppCompatActivity {
         }
 
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menureporte, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        View mostrar = null;
+        int id = item.getItemId();
+
+        if (id == R.id.menu_reporte) {
+            generarPDFOnclic(mostrar);
+        }
+        return true;
+    }
+
+    private String guardarFirma (Context context, String nombre, Bitmap firma){
+        ContextWrapper cw = new ContextWrapper(context);
+        File dirFir = cw.getDir("Firmas", Context.MODE_PRIVATE);
+        File myPath = new  File(dirFir,nombre + ".png");
+
+        FileOutputStream fos = null;
+        try {
+            fos = new FileOutputStream(myPath);
+            firma.compress(Bitmap.CompressFormat.JPEG, 10, fos);
+            fos.flush();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return myPath.getAbsolutePath();
+    }
+    //convertir bitmap a string ** baztrvk
+    public String BitMapToString(Bitmap bitmap){
+        ByteArrayOutputStream baos=new  ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG,100, baos);
+        byte [] b=baos.toByteArray();
+        String temp= Base64.encodeToString(b, Base64.DEFAULT);
+        return temp;
+    }
+
 }
