@@ -232,6 +232,7 @@
                 android:layout_marginRight="17dp"
                 android:gravity="center"/>
 
+
             <Button
                 android:id="@+id/btn_registrarUsu"
                 android:layout_width="175dp"
