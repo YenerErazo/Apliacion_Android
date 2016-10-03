@@ -8,41 +8,62 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    android:background="#fcf8f8"
+    android:background="#1756B0"
     tools:context="com.example.yener.login.MainActivity">
 
-    <TextView
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/logo_fup4"
+        android:layout_marginBottom="20dp"/>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:textSize="45sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="50dp"/>
-
-    <EditText
-        android:id="@+id/edt_nombre_usuario"
-        android:layout_marginBottom="25dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textStyle="normal"
-        android:hint="Nombre de usuario"
-        android:textColor="#000000"
-
-        />
-
-    <EditText
-        android:id="@+id/edt_contraseña"
         android:layout_marginBottom="20dp"
+        >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:src="@drawable/usu1"
+            />
+
+        <EditText
+            android:id="@+id/edt_nombre_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:hint="Nombre de usuario"
+            android:textColor="#faf6f6"
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textStyle="normal"
-        android:hint="Contraseña"
-        android:textColor="#000000"
-        android:inputType="textPassword"/>
+        >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:src="@drawable/contrasena1"
+            />
+
+        <EditText
+            android:id="@+id/edt_contraseña"
+            android:layout_marginBottom="20dp"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:hint="Contraseña"
+            android:textColor="#000000"
+            android:inputType="textPassword"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
@@ -55,38 +76,28 @@
             android:layout_height="45dp"
             android:text="Registrarse"
             android:textSize="20sp"
+            android:layout_margin="20dp"
             android:textStyle="normal|bold"
-            android:background="#838b84"
+            android:background="#108BC7"
             android:textColor="#faf6f6"
             android:layout_marginRight="17dp"
             android:gravity="center"/>
 
         <Button
             android:id="@+id/btn_login"
-            android:layout_width="175dp"
-            android:layout_height="45dp"
-            android:text="Iniciar Sesión"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:text="Sing in"
+            android:layout_margin="20dp"
             android:textSize="20sp"
             android:textStyle="normal|bold"
-            android:background="#838b84"
+            android:background="#108BC7"
             android:textColor="#faf6f6"
             android:gravity="center"
             />
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_admin"
-        android:layout_width="175dp"
-        android:layout_height="45dp"
-        android:text="ADMIN"
-        android:textSize="20sp"
-        android:textStyle="normal|bold"
-        android:background="#838b84"
-        android:textColor="#faf6f6"
-        android:gravity="center"
-        android:layout_marginTop="15dp"
-        />
 
 
 
