@@ -21,6 +21,7 @@
             android:gravity="center"
             android:textSize="30sp"
             android:textStyle="bold"
+            android:textColor="#faf6f6"
             android:layout_marginBottom="20dp"/>
         <ImageButton
             android:id="@+id/btn_tomarFoto"
@@ -199,7 +200,7 @@
                 android:layout_height="45dp"
                 android:text="Firma"
                 android:textSize="20sp"
-                android:textStyle="normal|bold"
+                android:textStyle="normal"
                 android:background="#108BC7"
                 android:textColor="#faf6f6"
                 android:layout_marginRight="17dp"
@@ -223,7 +224,7 @@
                 android:layout_height="45dp"
                 android:text="Cancelar"
                 android:textSize="20sp"
-                android:textStyle="normal|bold"
+                android:textStyle="normal"
                 android:background="#108BC7"
                 android:textColor="#faf6f6"
                 android:layout_marginRight="17dp"
@@ -235,7 +236,7 @@
                 android:layout_height="45dp"
                 android:text="Registrar"
                 android:textSize="20sp"
-                android:textStyle="normal|bold"
+                android:textStyle="normal"
                 android:background="#108BC7"
                 android:textColor="#faf6f6"
                 android:gravity="center" />
